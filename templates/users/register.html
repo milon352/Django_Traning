@@ -1,0 +1,19 @@
+{% extends 'blog/bash.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Join Today</legend>
+        {{ form|crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-info">Signup</button>
+        </div>
+    </form>
+    </div>
+    <div class="border-top mb-3">
+    <small>Already Heave An Account <a href="#" class="btn btn-outline-primary">Sign in</a> </small>
+    </div>
+{% endblock %}
