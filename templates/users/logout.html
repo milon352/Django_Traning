@@ -1,0 +1,6 @@
+{% extends 'blog/bash.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h1>Logout Sucessfull</h1>
+    <p>Login Again? <a class="btn btn-outline-info" href="{% url 'login' %}">Login</a> </p>
+{% endblock %}
